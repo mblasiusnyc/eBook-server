@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2> {{ book.title }} </h2>
+    
+    {% if editing == true %}
+      <form action="/add/submit/{{ book.url_name }}" method="POST" class="form-group">
+        <label>Book Title</label><br>
+        <input class="form-control" type="text" name="book-title" value="{{ book.title }}" required></input><br>
+
+        <label>Book Content</label><br>
+        <textarea class="form-control" name="book-content" rows="20" required>{{ book.body }}</textarea><br>
+
+        <input type="submit" class="btn btn-primary" value="Done" />
+      </form>
+    {% else %}
+      {{ book.body }} 
+      <br><br>
+
+      <a class="btn btn-danger" href="/show/{{ book.url_name }}/delete">Delete</a>
+      <a class="btn btn-primary" href="/show/{{ book.url_name }}/edit">Edit</a>
+    {% endif %}
+  </div>
+{% endblock %}

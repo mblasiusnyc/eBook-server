@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container">
+    <h2>Welcome to eBook Server!</h2>
+
+    <h3>Currently Hosted eBooks:</h3>
+
+  
+      {% if books.length > 0 %}
+        <ul>
+          {% for book in books %}
+            <li><a href="/show/{{ book.url_name }}" >{{ book.title}}</a></li><br>
+          {% endfor %}
+        </ul>
+      {% else %}
+        There are no eBooks. Why don't you <a href='/add'>add one</a>?
+      {% endif %}
+
+  </div>
+{% endblock %}

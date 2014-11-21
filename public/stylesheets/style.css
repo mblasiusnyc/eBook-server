@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font-family: "BTI Sans",Arial,sans-serif;
+  color: black;
+  background-color: #F5EFDC;
+}
+
+li:hover {
+  background-color: #BA8E04;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 5px solid #BA8E04;
+  font-size: 16px;
+}
+
+h2 {
+  color: #BA8E04;
+}
+
+label {
+  font-size: 16px;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #000;
+  size: 16px;
+  font-weight: 700;
+}
+
+li, li:hover {
+  list-style: none;
+  display: inline-block;
+}
+
+
+
